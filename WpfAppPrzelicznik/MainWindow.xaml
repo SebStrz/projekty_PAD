@@ -1,0 +1,54 @@
+﻿<Window x:Class="WpfAppPrzelicznik.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppPrzelicznik"
+        mc:Ignorable="d"
+        Title="Przelicznik Jednostek" Height="450" Width="800">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal" Margin="10,10,0,0">
+            <StackPanel Orientation="Vertical" Margin="0,0,10,0" Width="88">
+                <Label Content="długość [m]"/>
+                <TextBox x:Name="Dlugosc"/>
+            </StackPanel>
+            <RadioButton x:Name="mil" VerticalAlignment="Center" />
+            <StackPanel Orientation="Vertical" Margin="0,0,10,0">
+                <Label Content="mile" HorizontalAlignment="Center"/>
+                <Border BorderThickness="1"  BorderBrush="Red">
+                    <TextBlock Width="100" x:Name="miletext"/>
+                </Border>
+            </StackPanel>
+            <RadioButton x:Name="km" VerticalAlignment="Center" />
+            <StackPanel Orientation="Vertical" Margin="0,0,10,0">
+                <Label Content="km" HorizontalAlignment="Center"/>
+                <Border BorderThickness="1"  BorderBrush="Red">
+                    <TextBlock  Width="100" x:Name="kmtext"/>
+                </Border>
+            </StackPanel>
+            <Button Width="100" Margin="10" Content="Oblicz" Click="ObliczUp" Background="LawnGreen"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+            <StackPanel Orientation="Vertical" Margin="0,0,10,0">
+                <Label Content="Szybkość [m/s]"/>
+                <TextBox x:Name="Szybkosc"/>
+            </StackPanel>
+            <RadioButton x:Name="kmh" VerticalAlignment="Center" />
+            <StackPanel Orientation="Vertical" Margin="0,0,10,0">
+                <Label Content="km/h" HorizontalAlignment="Center"/>
+                <Border BorderThickness="1"  BorderBrush="Red">
+                    <TextBlock Width="100" x:Name="kmhtext" />
+                </Border>
+                
+            </StackPanel>
+            <RadioButton x:Name="milh" VerticalAlignment="Center" />
+            <StackPanel Orientation="Vertical" Margin="0,0,10,0">
+                <Label Content="mil/h" HorizontalAlignment="Center"/>
+                <Border BorderThickness="1"  BorderBrush="Red">
+                    <TextBlock  Width="100" x:Name="milhtext"/>
+                </Border>
+            </StackPanel>
+            <Button Width="100" Margin="10" Content="Oblicz" Click="ObliczDown" Background="LawnGreen"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
