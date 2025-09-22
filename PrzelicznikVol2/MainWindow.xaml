@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+
+        <StackPanel Width="200" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Center"  >
+            <TextBox x:Name="InputText" TextWrapping="Wrap" TextAlignment="Center" Text="0" Width="120" Height="30" InputScope="Number" TextChanged="MainFunc"/>
+            <ComboBox x:Name="InputCombo" Width="200" Height="30" SelectionChanged="MainFunc" >
+                <ComboBoxItem Uid="0" IsSelected="True" Content="Metry [m]" />
+                <ComboBoxItem Uid="1" Content="Kilometry [km]" />
+                <ComboBoxItem Uid="2" Content="Mile [mil]" />
+            </ComboBox>
+            <TextBlock x:Name="OutputText" TextWrapping="Wrap" TextAlignment="Center" Text="0" Width="120" Height="30"/>
+            <ComboBox x:Name="OutputCombo" Width="200" Height="30" SelectionChanged="MainFunc">
+                <ComboBoxItem Uid="0" Content="Metry [m]" />
+                <ComboBoxItem Uid="1" Content="Kilometry [km]" />
+                <ComboBoxItem Uid="2" IsSelected="True" Content="Mile [mil]" />
+            </ComboBox>
+        </StackPanel>
+            
+        
+
+
+
+    </Grid>
+</Window>
